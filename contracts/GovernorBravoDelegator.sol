@@ -83,5 +83,14 @@ contract GovernorBravoDelegator is GovernorBravoDelegatorStorage, GovernorBravoE
      * @dev Delegates execution to an implementation contract.
      * It returns to the external caller whatever the implementation returns or forwards reverts.
      */
+    fallback() external payable {
+        _fallback();
+    }
 
+    /**
+     * @dev Fallback function that delegates calls to implementation. Will run if call data is empty.
+     */
+    receive() external payable {
+        _fallback();
+    }
 }
