@@ -148,6 +148,11 @@ library SafeMath {
      * Requirements:
      *
      * - The divisor cannot be zero.
+     */
+    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b > 0, "SafeMath: modulo by zero");
+        return a % b;
+    }
 
     /**
      * @dev Returns the subtraction of two unsigned integers, reverting with custom message on
