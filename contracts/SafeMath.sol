@@ -131,7 +131,11 @@ library SafeMath {
      * Requirements:
      *
      * - The divisor cannot be zero.
-
+     */
+    function div(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b > 0, "SafeMath: division by zero");
+        return a / b;
+    }
 
     /**
      * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
