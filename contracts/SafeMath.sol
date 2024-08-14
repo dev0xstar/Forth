@@ -112,13 +112,7 @@ library SafeMath {
      * Requirements:
      *
      * - Multiplication cannot overflow.
-     */
-    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
-        if (a == 0) return 0;
-        uint256 c = a * b;
-        require(c / a == b, "SafeMath: multiplication overflow");
-        return c;
-    }
+
 
     /**
      * @dev Returns the integer division of two unsigned integers, reverting on
@@ -131,11 +125,7 @@ library SafeMath {
      * Requirements:
      *
      * - The divisor cannot be zero.
-     */
-    function div(uint256 a, uint256 b) internal pure returns (uint256) {
-        require(b > 0, "SafeMath: division by zero");
-        return a / b;
-    }
+
 
     /**
      * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
@@ -148,11 +138,6 @@ library SafeMath {
      * Requirements:
      *
      * - The divisor cannot be zero.
-     */
-    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
-        require(b > 0, "SafeMath: modulo by zero");
-        return a % b;
-    }
 
     /**
      * @dev Returns the subtraction of two unsigned integers, reverting with custom message on
